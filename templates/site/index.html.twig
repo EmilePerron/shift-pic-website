@@ -7,5 +7,40 @@
 {% endblock %}
 
 {% block body %}
+    <section id="hero">
+        <div class="content">
+            <h2>Streamline your image resizing and optimizing process.</h2>
+            <p>Your time is too valuable to be spent on resizing and optimizing images manually. Let Shift Pic do the heavy lifting for you.</p>
 
+            <a href="{{ webstore_url }}" class="button large">
+                <span>Add to Chrome</span><span class="its-free"> - It's free</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="flex-container">
+            <div class="two-third">
+                <div class="image-canvas">
+                    <img src="" alt="" id="step-1">
+                    <img src="" alt="" id="step-2">
+                    <img src="" alt="" id="step-3">
+                </div>
+            </div>
+            <div class="third steps">
+                <a href="#step-1" class="step-switcher">
+                    <div class="title">1. Select the image</div>
+                    <div class="description">Just click on the image node on your website.</div>
+                </a>
+                <a href="#step-2" class="step-switcher">
+                    <div class="title">2. Choose your source image(s)</div>
+                    <div class="description">Upload images from your computer or find the perfect stock photo.</div>
+                </a>
+                <a href="#step-3" class="step-switcher">
+                    <div class="title">3. Download your optimized image(s)</div>
+                    <div class="description">Submit your image(s), and a download for the optimized versions will automatically follow.</div>
+                </a>
+            </div>
+        </div>
+    </section>
 {% endblock %}
