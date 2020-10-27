@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% block head %}{% endblock %}
+
+        <title>{% block title %}Shift Pic{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('favicons/safari-pinned-tab.svg') }}" color="#6a41c3">
+        <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="{{ asset('favicons/browserconfig.xml') }}">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta name="description" content="Resize and optimize images for every resolution in a single click with the Shift Pic Chrome extension">
+        <meta property="og:title" content="Shift Pic - Image optimization for web developers and designers">
+        <meta property="og:image" content="{{ absolute_url(asset('media/og-image.png')) }}">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
