@@ -1,3 +1,80 @@
-#hero { display: grid; width: var(--container-width); min-height: clamp(0px, 535px, 80vh); grid-template-columns: 1fr 2fr; align-items: center; margin: auto; }
+#hero { display: grid; width: var(--container-width); max-width: 100%; min-height: clamp(0px, 535px, 80vh); padding: var(--container-padding); grid-template-columns: 1fr 2fr; align-items: center; margin: auto; }
 #hero h2 { margin-bottom: 30px; }
 #hero p { width: 435px; max-width: 100%; margin-bottom: 30px; font-size: 1.25rem; line-height: 1.5; }
+#hero .image svg { width: 650px; max-width: 100%; float: right; }
+
+.canvas-wrapper { display: flex; }
+.canvas-wrapper .scene-canvas { flex: 1; margin-right: 60px; background-color: #f1f1f1; border-radius: 15px; position: relative; }
+.canvas-wrapper .scene-canvas .scene { width: 100%; height: 100%; border-radius: 15px; overflow: hidden; position: absolute; top: 0; left: 0; opacity: 0; transition: all .5s ease; }
+.canvas-wrapper .scene-canvas .scene.active { opacity: 1; }
+.canvas-wrapper .scene-canvas .scene img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.step-switcher { display: block; padding: 15px 0; padding-top: 25px; margin-top: 10px; color: #333; border-top: 1px solid #f1f1f1; }
+.step-switcher .title { font-size: 1.15rem; font-weight: 600; line-height: 1.5; }
+.step-switcher .description { padding-left: 1.3rem; }
+.step-switcher:hover { color: #777; }
+.step-switcher.active { color: var(--color-main); }
+
+#features .grid { display: grid; grid-template-areas: ". ."; grid-gap: 60px; margin-top: 60px; }
+#features .feature { display: grid; grid-template-areas: "img ." "img ."; grid-gap: 10px 30px; }
+#features .feature img { grid-area: img; width: 50px; height: 50px; object-fit: contain; object-position: center; }
+#features .feature .title { margin: 0; font-size: 1.4em; font-weight: 600; }
+#features .feature .description { font-size: 1.1rem; }
+
+#stats .flex-container { justify-content: center; align-items: center; }
+#stats .counter { display: flex; width: 250px; min-height: 250px; margin: 45px; flex-direction: column; justify-content: center; align-items: center; font-size: 1rem; font-weight: 600; color: var(--color-main); border: 6px solid var(--color-main); border-radius: 50%; position: relative; }
+#stats .counter::before { content: ' '; position: absolute; top: 0; left: 0; width: calc(100% - 10px); height: calc(100% - 10px); border-radius: 50%; border: 5px solid var(--color-focus); }
+#stats .counter .count { font-family: var(--font-heading); font-size: 4.5em; }
+#stats .counter.small { width: 200px; min-height: 200px; }
+#stats .counter.small::before { display: none; }
+#stats .counter.small .count { font-size: 3em; }
+
+#add-for-free { text-align: center; background-color: #e5daff; }
+
+#pricing { display: flex; padding: var(--container-padding); flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; background-color: var(--color-main); }
+#pricing .plans-container { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap: 10px; width: 1000px; max-width: 100%; margin-top: 30px; }
+#pricing .plans-container .plan { display: flex; flex-direction: column; justify-content: space-between; padding: 15px; text-align: center; color: #000; background-color: white; border-radius: 8px; }
+#pricing .plans-container .plan .header { margin-top: 30px; }
+#pricing .plans-container .plan .header .title { font-size: 1.25em; line-height: 1.5; font-weight: 400; }
+#pricing .plans-container .plan .header .price { display: flex; justify-content: center; align-items: baseline; margin: 5px auto; font-family: var(--font-heading); font-size: 28px; line-height: 1; }
+#pricing .plans-container .plan .header .price sup { font-size: .65em; position: relative; top: -.35em; }
+#pricing .plans-container .plan .header .per-month { font-size: 12px; color: #999; }
+#pricing .plans-container .plan hr { display: block; width: 60%; height: 1px; margin: 20px auto; background-color: #eee; border: none; }
+#pricing .plans-container .plan .description-wrapper { margin-bottom: 30px; font-size: 14px; line-height: 1.5; color: #555; }
+#pricing .plans-container .plan .description-wrapper .description-line + .description-line { margin-top: 8px; }
+#pricing .plans-container .plan .description-wrapper .description-line .subline { font-size: .8em; }
+#pricing .plans-container .plan:first-child { color: #d8c5ff; background-color: var(--color-dark); }
+#pricing .plans-container .plan:first-child .header { color: #ede4ff; }
+#pricing .plans-container .plan:first-child .header .per-month { color: #bea3f3; }
+#pricing .plans-container .plan:first-child hr { background-color: #bea3f3; }
+#pricing .plans-container .plan:first-child .description-wrapper { color: #d8c5ff; }
+#pricing .plans-container .plan:first-child .description-wrapper .subline { color: #c4b0ec; }
+#pricing .plans-container .plan:nth-child(2) { color: #eae0ff; background-color: #8869ca; }
+#pricing .plans-container .plan:nth-child(2) .header { color: #ffffff; }
+#pricing .plans-container .plan:nth-child(2) .header .title { color: #f3eeff; }
+#pricing .plans-container .plan:nth-child(2) .header .per-month { color: #bea3f3; }
+#pricing .plans-container .plan:nth-child(2) hr { background-color: #ae94e4; }
+#pricing .plans-container .plan:nth-child(2) .description-wrapper { color: #d8c5ff; }
+#pricing .plans-container .plan:nth-child(2) .description-wrapper .subline { color: #c4b0ec; }
+#pricing .clarifications { margin-top: 30px; color: rgba(255, 255, 255, .75); }
+
+
+@media (max-width: 1080px) {
+    #pricing .plans-container { width: 600px; max-width: 100%; padding: 0 15px; margin: auto; grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 991px) {
+    #stats .flex-container { flex-direction: column; }
+}
+
+@media (max-width: 767px) {
+    #hero { display: block; min-height: 0; margin-top: 75px; }
+    #hero .image { display: none; }
+
+    #how-it-works .steps { order: -1; }
+    #how-it-works .canvas-wrapper .scene-canvas { width: 100%; padding-bottom: 66%; margin: 0; margin-top: 30px; }
+    #features .grid { grid-template-areas: "."; }
+
+    .step-switcher { padding: 10px 0; padding-top: 15px; }
+
+    #pricing .plans-container { grid-template-columns: 1fr; }
+}
