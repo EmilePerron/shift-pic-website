@@ -1,0 +1,10 @@
+#hero { display: grid; width: var(--container-width); max-width: 100%; min-height: clamp(0px, 535px, 80vh); padding: var(--container-padding); grid-template-columns: 1fr 2fr; align-items: center; margin: auto; }
+#hero h2 { margin-bottom: 30px; }
+#hero p { width: 435px; max-width: 100%; margin-bottom: 30px; font-size: 1.25rem; line-height: 1.5; }
+#hero .image svg { width: 650px; max-width: 100%; float: right; }
+
+#faq h2 { width: var(--container-width); max-width: 100%; padding: var(--container-padding); padding-bottom: 0; margin: auto; text-align: center; }
+#faq a { color: var(--color-main); text-decoration: underline; }
+#faq a:hover { color: #000; }
+#faq .flex-container > * { padding: 20px; }
+#faq .contact-cta { width: var(--container-width); max-width: 100%; padding: var(--container-padding); margin: auto; font-size: 1.15rem; text-align: center; }

@@ -13,8 +13,14 @@ class SiteController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('site/index.html.twig', [
+        return $this->render('site/index.html.twig', []);
+    }
 
-        ]);
+    /**
+     * @Route("/support", name="support")
+     */
+    public function support(): Response
+    {
+        return $this->render('site/support.html.twig', []);
     }
 }

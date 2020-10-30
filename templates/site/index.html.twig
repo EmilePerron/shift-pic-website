@@ -3,13 +3,15 @@
 {% block title %}Shift Pic{% endblock %}
 
 {% block head %}
-
+    <meta name="description" content="Resize and optimize images for every resolution in a single click with the Shift Pic Chrome extension">
+    <meta property="og:title" content="Shift Pic - Image optimization for web developers and designers">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 {% endblock %}
 
 {% block body %}
     <section id="hero">
         <div class="content">
-            <h2>Streamline your image resizing and optimizing process.</h2>
+            <h1>Streamline your image resizing and optimizing process.</h1>
             <p>Your time is too valuable to be spent resizing and optimizing images manually. Let Shift Pic do the heavy lifting for you.</p>
 
             <a href="{{ webstore_url }}" target="_blank" class="button large">
@@ -195,12 +197,6 @@
             Checkout takes place within the Chrome extension.
         </div>
     </section>
-
-    <footer>
-        © Shift Pic {{ 'now' | date('Y') }}
-        <br>
-        <a href="https://www.emileperron.com/privacy-policy" target="_blank">Privacy policy</a>
-    </footer>
 {% endblock %}
 
 {% block javascripts %}
@@ -312,3 +308,5 @@
         }
     </script>
 {% endblock %}
+
+{% block footer_cta %}{% endblock %}

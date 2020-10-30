@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Support{% endblock %}
+
+{% block head %}
+    <meta name="description" content="Contact us or find commonly asked questions about the Shift Pic Chrome Extension">
+    <meta property="og:title" content="Support - Shift Pic">
+    <link rel="stylesheet" href="{{ asset('css/support.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section id="hero">
+        <div class="content">
+            <h1>Support</h1>
+            <p>Running into problems with the extension? Need help with your subscription? Mistakenly upgraded to a plan you didn't need?</p>
+
+            <a href="mailto:emile@shiftpic.co" target="_blank" class="button large">
+                <span>Contact the developer &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently asked questions</h2>
+        <div class="flex-container">
+            <div class="third">
+                <h3>Can I try a paid plan for free?</h3>
+                <p>We currently do not offer any free trials for our paid plans.</p>
+                <p>If you really want a free trial and have a good reason for it, send us an email at <a href="mailto:emile@shiftpic.co">emile@shiftpic.co</a> and we'll see if something can be arranged.</p>
+            </div>
+            <div class="third">
+                <h3>I can't select any images: what is wrong?</h3>
+                <p>It is possible that the extension has fallen out of sync with the web page you are on.</p>
+                <p>Close every Shift Pic window, refresh the web page you are on and try again.</p>
+            </div>
+            <div class="third">
+                <h3>I've downgraded my plan. Why does the extension still shows my previous plan?</h3>
+                <p>When you downgrade your plan, your license remains on your previous plan until the end of your billing period, as you have already paid for this time.</p>
+                <p>Once the next billing period begins, your plan will be updated.</p>
+            </div>
+        </div>
+        <div class="contact-cta">
+            Your problem hasn't been solved by these answers? <br>
+            Contact us at <a href="mailto:billing@shiftpic.co">billing@shiftpic.co</a> for any billing-related issues, or at <a href="mailto:emile@shiftpic.co">emile@shiftpic.co</a> for any other problem or question.
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
