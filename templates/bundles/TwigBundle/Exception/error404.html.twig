@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Support{% endblock %}
+
+{% block head %}
+    <meta name="description" content="Contact us or find commonly asked questions about the Shift Pic Chrome Extension">
+    <meta property="og:title" content="Support - Shift Pic">
+    <link rel="stylesheet" href="{{ asset('css/support.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section id="hero">
+        <div class="content">
+            <h1>Error 404</h1>
+            <p>Sorry, it looks like this page doesn't exist or has been moved to a different URL.</p>
+            <p>If you think this is an error, please contact us at <a href="mailto:emile@shiftpic.co">emile@shiftpic.co</a></p>
+
+            <a href="{{ path('home') }}" class="button large">
+                <span>Go back to the homepage</span>
+            </a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block footer_cta %}{% endblock %}
+{% block footer %}{% endblock %}

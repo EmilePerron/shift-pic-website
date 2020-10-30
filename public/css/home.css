@@ -1,8 +1,3 @@
-#hero { display: grid; width: var(--container-width); max-width: 100%; min-height: clamp(0px, 535px, 80vh); padding: var(--container-padding); grid-template-columns: 1fr 2fr; align-items: center; margin: auto; }
-#hero h2 { margin-bottom: 30px; }
-#hero p { width: 435px; max-width: 100%; margin-bottom: 30px; font-size: 1.25rem; line-height: 1.5; }
-#hero .image svg { width: 650px; max-width: 100%; float: right; }
-
 .canvas-wrapper { display: flex; }
 .canvas-wrapper .scene-canvas { flex: 1; margin-right: 60px; background-color: #f1f1f1; border-radius: 15px; position: relative; }
 .canvas-wrapper .scene-canvas .scene { width: 100%; height: 100%; border-radius: 15px; overflow: hidden; position: absolute; top: 0; left: 0; opacity: 0; transition: all .5s ease; }

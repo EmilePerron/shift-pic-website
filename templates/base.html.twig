@@ -50,12 +50,14 @@
             </section>
         {% endblock %}
 
-        <footer>
-            © Shift Pic {{ 'now' | date('Y') }}
-            <br>
-            <a href="{{ path('support') }}" target="_blank">Support</a>
-            <a href="https://www.emileperron.com/privacy-policy" target="_blank">Privacy policy</a>
-        </footer>
+        {% block footer %}
+            <footer>
+                © Shift Pic {{ 'now' | date('Y') }}
+                <br>
+                <a href="{{ path('support') }}" target="_blank">Support</a>
+                <a href="https://www.emileperron.com/privacy-policy" target="_blank">Privacy policy</a>
+            </footer>
+        {% endblock %}
 
         {% block javascripts %}{% endblock %}
     </body>

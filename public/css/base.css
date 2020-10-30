@@ -15,6 +15,8 @@ html, body { padding: 0; margin: 0; font-family: var(--font-body); font-size: 14
 * { font-family: inherit; font-size: inherit; font-weight: inherit; line-height: inherit; -webkit-font-smoothing: inherit; box-sizing: inherit; }
 img { max-width: 100%; }
 a { text-decoration: none; transition: all .25s ease-in-out; }
+p a { color: var(--color-main); }
+p a:hover { color: #333; }
 
 h1,
 h2 { margin: 0; margin-bottom: 20px; font-family: var(--font-body); font-size: 3rem; font-weight: 800; }
@@ -37,10 +39,10 @@ footer { padding: 15px 30px; font-size: 13px; text-align: center; color: #999; b
 footer a { display: inline-block; margin: 5px; text-decoration: underline; color: #999; }
 footer a:hover { color: var(--color-focus); }
 
-.button { display: inline-block; padding: 8px 20px; font-size: 1rem; font-weight: 600; color: #fff; background-color: #fff; border: 3px solid var(--color-main); border-radius: 100px; overflow: hidden; position: relative; transition: all .1s ease-in-out; }
+.button { display: inline-block; padding: 8px 20px; font-size: 1rem; font-weight: 600; color: #fff; background-color: var(--color-main); border: 3px solid var(--color-main); border-radius: 100px; overflow: hidden; position: relative; transition: color .1s ease-in-out, background-color .1s ease .35s; }
 .button::before { content: ' '; position: absolute; top: calc(50% - 150px); left: calc(50% - 150px); width: 300px; height: 300px; background-color: var(--color-main); border-radius: 50%; transform: scale(1); z-index: 1; transition: all .35s ease-in-out; }
 .button span { position: relative; z-index: 2; }
-.button:hover { color: var(--color-main); transition: all .25s ease-in-out .1s; }
+.button:hover { color: var(--color-main); background-color: white; transition: all .25s ease-in-out .1s; }
 .button:hover::before { transform: scale(0); transition: all .5s ease-in-out; }
 .button:focus { outline: none; box-shadow: 0 0 0 3px white, 0 0 0 7px var(--color-focus) }
 .button.large { padding: 14px 40px; font-size: 1.15rem; }
@@ -49,6 +51,11 @@ footer a:hover { color: var(--color-focus); }
 .flex-container { display: flex; justify-content: stretch; align-items: stretch; width: var(--container-width); max-width: 100%; padding: var(--container-padding); margin: auto; }
 .two-third { flex: 1 1 66%; }
 .third { flex: 1 1 33%; }
+
+#hero { display: grid; width: var(--container-width); max-width: 100%; min-height: clamp(0px, 535px, 80vh); padding: var(--container-padding); grid-template-columns: 1fr 2fr; align-items: center; margin: auto; }
+#hero h2 { margin-bottom: 30px; }
+#hero p { width: 435px; max-width: 100%; margin-bottom: 30px; font-size: 1.25rem; line-height: 1.5; }
+#hero .image svg { width: 650px; max-width: 100%; float: right; }
 
 #add-for-free { text-align: center; background-color: #e5daff; }
 

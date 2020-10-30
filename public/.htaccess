@@ -5,9 +5,11 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex index.php
 
+RewriteEngine On
+
 # Force to use www
-RewriteCond %{HTTP_HOST} !^dev.shiftpic.co$ [NC]
-RewriteRule ^(.*)$ https://dev.shiftpic.co/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} !^www.shiftpic.co$ [NC]
+RewriteRule ^(.*)$ https://www.shiftpic.co/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} off
