@@ -23,6 +23,15 @@
         <meta name="twitter:card" content="summary_large_image">
 
         {% block head %}{% endblock %}
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R69TFBSVRB"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R69TFBSVRB');
+        </script>
     </head>
     <body>
         <header>
@@ -60,5 +69,23 @@
         {% endblock %}
 
         {% block javascripts %}{% endblock %}
+        <script>
+            // GA event: clicked webstore link
+            for (const webstoreLink of document.querySelectorAll("a[href='{{ webstore_url }}']")) {
+                webstoreLink.addEventListener('click', function(){
+                    ga('send', 'event', '{{ app.request.get('_route') }}', 'webstore link clicked', e.target.textContent.trim());
+                });
+            }
+
+            // GA event: scrolled to bottom of page
+            let hasScrolledToBottom = false;
+            const footerNode = document.querySelector('footer');
+            window.addEventListener('scroll', function(){
+                if (!hasScrolledToBottom && window.scrollY + window.innerHeight >= footerNode.offsetTop) {
+                    hasScrolledToBottom = true;
+                    ga('send', 'event', '{{ app.request.get('_route') }}', 'page completely scrolled');
+                }
+            });
+        </script>
     </body>
 </html>
