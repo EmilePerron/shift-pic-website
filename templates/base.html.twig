@@ -72,8 +72,11 @@
         <script>
             // GA event: clicked webstore link
             for (const webstoreLink of document.querySelectorAll("a[href='{{ webstore_url }}']")) {
-                webstoreLink.addEventListener('click', function(){
-                    ga('send', 'event', '{{ app.request.get('_route') }}', 'webstore link clicked', e.target.textContent.trim());
+                webstoreLink.addEventListener('click', function(e){
+                    gtag('event', 'webstore link clicked', {
+                        event_category: '{{ app.request.get('_route') }}',
+                        event_label: e.target.textContent.trim()
+                    });
                 });
             }
 
@@ -83,7 +86,9 @@
             window.addEventListener('scroll', function(){
                 if (!hasScrolledToBottom && window.scrollY + window.innerHeight >= footerNode.offsetTop) {
                     hasScrolledToBottom = true;
-                    ga('send', 'event', '{{ app.request.get('_route') }}', 'page completely scrolled');
+                    gtag('event', 'page completely scrolled', {
+                        event_category: '{{ app.request.get('_route') }}'
+                    });
                 }
             });
         </script>
